@@ -1,5 +1,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@500&display=swap');
 
+/* @media screen and (max-device-width: 800px) {
+    .container {
+        display: flex;
+        column-count: 3;
+        margin: 1em 2em;
+    }
+} */
+
 *,*::after,*::before {
     margin: 0%;
     padding: 0;
@@ -20,6 +28,8 @@ body {
     /* background: linear-gradient(180deg, #0b00a1 0%, #3498db  100%); */
 }
 
+
+
 /* TITULO, IMAGEM ↓ */
 #cabecalho {
     margin-top: 50%;
@@ -34,7 +44,20 @@ body {
 }
 
 h1 {
-    color: rgb(224, 250, 253);
+    font-size: 50px;
+    background: -webkit-linear-gradient(#3528f1, #61c0ff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+h1::selection {
+    color: #0b00a1;
+    background: #3498db;
+}
+
+header:hover {
+    box-shadow: 0 0 10px 0 #3498db inset, 0 0 10px 4px #3498db;
+    transition: all 150ms ease-in-out;
 }
 
 .imagem-principal {
@@ -48,16 +71,37 @@ h1 {
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    font-weight: 700;
+}
+
+#data:hover {
+    box-shadow: 0 0 10px 0 #3498db inset, 0 0 10px 4px #3498db;
+    transition: all 150ms ease-in-out;
+}
+
+span {
+    margin-top: 10px;
+}
+
+span::selection {
+    color: #0b00a1;
+    background: #3498db;
+}
+
+input::selection {
+    color: #0b00a1;
+    background: #3498db;
 }
 
 .input {
     color: #eee;
-    background: linear-gradient(180deg, #0b00a1 0%, #3498db  100%);
+    background: transparent;
 }
 
 #data {
     border: #3498db solid 3px;
     border-radius: 0.6em;
+    font-weight: 700;
 }
 
 .btn {
@@ -102,7 +146,14 @@ h1 {
     font-size: 30px;
     border-radius: 10px;
     border: #3498db inset 5px;
+    font-weight: 700;
 }
+
+#conteudo:hover {
+    box-shadow: 0 0 10px 0 #3498db inset, 0 0 10px 4px #3498db;
+    transition: all 150ms ease-in-out;
+}
+
 /* CONTEUDO ↑ */
 
 /* RODAPÉ ↓ */
@@ -114,13 +165,21 @@ h1 {
     float: left;
     margin-top: 200px;
     padding: 20px 45%;
+    letter-spacing: 2px;
+    font-weight: 500;
 }
 
 .rodape, a {
     font-size: 20px;
-    background: -webkit-linear-gradient(#3498db, #0b00a1);
+    background: -webkit-linear-gradient(#3528f1, #61c0ff);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
+
+p:hover {
+    box-shadow: 0 0 10px 0 #3498db inset, 0 0 10px 4px #3498db;
+    transition: all 150ms ease-in-out;
+}
+
 /* RODAPÉ ↑ */
 
