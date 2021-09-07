@@ -1,12 +1,29 @@
 @import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@500&display=swap');
 
-/* @media screen and (max-device-width: 800px) {
-    .container {
-        display: flex;
-        column-count: 3;
-        margin: 1em 2em;
+@media (max-width: 800px) {
+    #cabecalho {
+        flex-direction: column;
+        width: 100%;
+        font-size: 25px;
+        padding: 10px;
+        text-align: center;
     }
-} */
+
+    .titulo {
+        color: red;
+    }
+
+    #conteudo {
+        flex-direction: column;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+}
+
+@media (max-width: 500px) {
+
+}
 
 *,*::after,*::before {
     margin: 0%;
@@ -25,7 +42,7 @@ body {
     font-family: Helvetica;
     color: #eee;
     background-image: url("Faded-Sky.png");
-    /* background: linear-gradient(180deg, #0b00a1 0%, #3498db  100%); */
+
 }
 
 
@@ -43,16 +60,16 @@ body {
     height: 300px;
 }
 
-h1 {
+.titulo {
+    cursor: auto;
     font-size: 50px;
-    background: -webkit-linear-gradient(#3528f1, #61c0ff);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+    color: #0b00a1;
 }
 
-h1::selection {
+.titulo::selection {
     color: #0b00a1;
-    background: #3498db;
+    background: cross-fade(#eee);
+    background-color: #3498db;
 }
 
 header:hover {
@@ -77,15 +94,6 @@ header:hover {
 #data:hover {
     box-shadow: 0 0 10px 0 #3498db inset, 0 0 10px 4px #3498db;
     transition: all 150ms ease-in-out;
-}
-
-span {
-    margin-top: 10px;
-}
-
-span::selection {
-    color: #0b00a1;
-    background: #3498db;
 }
 
 input::selection {
@@ -142,8 +150,9 @@ input::selection {
 /* CONTEUDO  ↓ */
 #conteudo{
     margin: 5%;
-    padding: 250px;
+    padding: 50px;
     font-size: 30px;
+    color: #0b00a1;
     border-radius: 10px;
     border: #3498db inset 5px;
     font-weight: 700;
@@ -152,6 +161,18 @@ input::selection {
 #conteudo:hover {
     box-shadow: 0 0 10px 0 #3498db inset, 0 0 10px 4px #3498db;
     transition: all 150ms ease-in-out;
+}
+
+#conteudo::selection {
+    color: #0b00a1;
+    background: #3498db;
+}
+
+#imagem-conteudo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 400px;
 }
 
 /* CONTEUDO ↑ */
@@ -180,6 +201,5 @@ p:hover {
     box-shadow: 0 0 10px 0 #3498db inset, 0 0 10px 4px #3498db;
     transition: all 150ms ease-in-out;
 }
-
 /* RODAPÉ ↑ */
 
