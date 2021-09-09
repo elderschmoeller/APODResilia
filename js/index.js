@@ -1,5 +1,3 @@
-// let botao = document.getElementById('botao');
-
 $('botao').click(function(evento) {
     evento.preventDefault();
     sendRequest();

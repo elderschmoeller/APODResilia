@@ -6,22 +6,22 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
     <title>NASA API</title> <!-- Titulo  -->
 
     <link rel="stylesheet" href="style.css"> <!-- link do css -->
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
-        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script><!-- chave da API -->
-    <script src="index.js"></script> <!-- link do js -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script><!-- chave da API -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <script src="./js/index.js"></script> <!-- link do js -->
 </head>
 
 <body id="">
     <!-- cabecalho, Titulo, e imagem ↓ -->
     <header id="cabecalho">
-        <div>
+        <div>    
             <h1 class="titulo">NASA API</h1>
         </div>
-        <img id="imagem-menu" class="imagem-principal" src="NASA-Logo-PNG-High-Quality-Image.png" alt="imagem-menu">
+        <img id="imagem-menu" class="imagem-principal" src="NASA-Logo-PNG-High-Quality-Image.png" alt="imagem-menu">       
     </header>
     <!-- cabecalho, Titulo, e imagem ↑ -->
 
@@ -29,14 +29,17 @@
     <div id="botao-escolha">
         <p class="data-escolha"></p>
         <input type="date" id="data">
-        <input id="botao" class="btn" type="button" value="Pesquisar" onclick="requisicaoApi()">
+        <input id="botao" class="btn" type="button" value="Pesquisar" onclick="requisicaoApi()" >
     </div>
     <!-- Botao de pesquisa ↑ -->
 
     <!-- Conteúdo e imagem do conteúdo linkados ↓ -->
     <div id="conteudo">
-        <img id="imagem-conteudo">
+        <img id="imagem-conteudo" style="max-width:100%;height:auto;">
+        <!-- <amp-fit-text width="200" height="200" layout="responsive" ></amp-fit-text> -->
     </div>
+    
+    <button class="btn-att" value="Refresh Page" onClick="window.location.reload()">Atualizar página</button>
     <!-- Conteúdo e imagem do conteúdo linkados ↑ -->
 
     <!-- Rodape com Linkedin ↓ -->

@@ -1,17 +1,28 @@
 @import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@500&display=swap');
+@media (max-width: 1000px){
+    #conteudo {
+        max-width: auto;
+        max-height: auto;
+    }
 
-@media screen and (max-width: 380px) and (orientation:portrait) {
-    #cabecalho { max-width: 1000px; }
-    #conteudo { min-width: 600px; }
-}
+    #imagem-conteudo {
+        max-width: 100%;
+    }
 
-@media (max-width: 500px) {
+    #cabecalho {
+        display: none;
+        border: none;
+    }
 
+    .rodape {
+        max-width: 100%;
+        max-height: 100%;
+    }
 }
 
 *,*::after,*::before {
     margin: 0%;
-    padding: 0;
+    padding: 0%;
     box-sizing: border-box;
 }
 
@@ -23,7 +34,6 @@ body,html {
 body {
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
     font-family: Helvetica;
     background-image: url("Faded-Sky.png");
@@ -33,15 +43,15 @@ body {
 
 /* TITULO, IMAGEM ↓ */
 #cabecalho {
-    margin-top: 50%;
+    /* margin-top: 50%; */
     display: flex;
     justify-content: center;
     flex-direction: column;
     align-items: center;
     border: #3498db solid 5px;
     border-radius: 0.6em;
-    width: 400px;
-    height: 300px;
+    width: 20%;
+    height: 40%;
     transition: all 150ms ease-in-out;
 }
 
@@ -50,10 +60,12 @@ body {
 }
 
 .titulo {
+    margin-top: 30%;
     cursor: auto;
-    font-size: 50px;
+    font-size: 300%;
     color: #0b00a1;
     transition: all 150ms ease-in-out;
+    word-wrap: break-word;
 }
 
 .titulo::selection {
@@ -68,7 +80,8 @@ header:hover {
 }
 
 .imagem-principal {
-    height: 200px;
+    height: 100%;
+    width: 100%;
 }
 /* TITULO, IMAGEM ↑ */
 
@@ -78,13 +91,13 @@ header:hover {
     background: transparent;
     border: #3498db solid 2px;
     font-weight: 700;
-    margin-top: 15px;
+    margin-top: 5%;
     transition: all 150ms ease-in-out;
     cursor: pointer;
 }
 
 .data-escolha {
-    margin-top: 10px;
+    margin-top: 5%;
     color: #eee;
 }
 
@@ -130,7 +143,7 @@ input::selection {
     align-self: center;
     font-size: 1rem;
     line-height: 1;
-    margin: 20px;
+    margin: 10%;
     padding: 1.2em 2.8em;
     text-decoration: none;
     text-align: center;
@@ -153,20 +166,48 @@ input::selection {
 }
 /* ESCOLHA DATA, BOTÃO ↑ */
 
+/* BOTÃO ATUALIZAR ↓ */
+.btn-att {
+    box-sizing: border-box;
+    background-color: transparent;
+    border: 2px solid #3498db;
+    border-radius: 0.6em;
+    cursor: pointer;
+    align-self: center;
+    font-size: 1rem;
+    line-height: 1;
+    padding: 1.2em 2.8em;
+    text-decoration: none;
+    text-align: center;
+    text-transform: uppercase;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    border-color: #3498db;
+    color: #fff;
+    box-shadow: 0 0 40px 40px #3498db inset, 0 0 0 0 #3498db;
+    transition: all 150ms ease-in-out;
+}
+.btn-att:hover {
+    box-shadow: 0 0 10px 0 #3498db inset, 0 0 10px 4px #3498db;
+}
+/* BOTÃO ATUALIZAR ↑ */
+
 /* CONTEUDO  ↓ */
 #conteudo{
     margin: 5%;
-    padding: 50px;
-    font-size: 30px;
+    padding: 5%;
+    font-size: 20px;
     color: #0b00a1;
     border-radius: 10px;
     border: #3498db inset 5px;
     font-weight: 700;
     word-wrap: break-word;
     transition: all 150ms ease-in-out;
+    max-width: fit-content;
+    max-height: fit-content;
 }
-
 #conteudo:hover {
+    backdrop-filter: blur(10px);
     box-shadow: 0 0 10px 0 #3498db inset, 0 0 10px 4px #3498db;
 }
 
@@ -177,10 +218,12 @@ input::selection {
 
 #imagem-conteudo {
     display: block;
+    height: 40%;
+    /* width: 30%; */
     margin-left: auto;
     margin-right: auto;
-    width: 25%;
-    margin-bottom: 20px;
+    margin-top: auto;
+    margin-bottom: 1%;
     border: #3498db inset 5px;
     border-radius: 10px;
     transition: all 150ms ease-in-out;
@@ -189,7 +232,6 @@ input::selection {
 #imagem-conteudo:hover {
     box-shadow: 0 0 10px 0 #3498db inset, 0 0 10px 4px #3498db;
 }
-
 /* CONTEUDO ↑ */
 
 /* RODAPÉ ↓ */
@@ -199,15 +241,13 @@ input::selection {
     flex-wrap: wrap;
     width: 100%;
     float: left;
-    margin-top: 200px;
-    padding: 20px 45%;
+    padding: 1%;
     letter-spacing: 2px;
     font-weight: 500;
 }
 
 .rodape, a {
     font-size: 20px;
-    /* background: -webkit-linear-gradient(#3528f1, #61c0ff); */
 }
 
 a:visited {
